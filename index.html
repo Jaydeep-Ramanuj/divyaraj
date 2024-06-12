@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+      }
+      img {
+        height: 600px;
+        width: 100%;
+      }
+      .card1 .content{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-top: -500px;
+        margin-left: 70px;
+      }
+      .card1 .content h5:nth-child(1){
+        margin-bottom: 20px;
+        font-size: 50px;
+      }
+      .card1 .content h5:nth-child(2){
+        font-size: 20px;
+        margin-bottom: 30px;
+        color:rgb(217, 208, 208) ;
+      }
+      .card1 .content h5:nth-child(3){
+        background-color: rgb(21, 21, 78);
+        padding: 10px;
+        width: 140px;
+        border-radius: 20px;
+        padding-left: 25px;
+      }
+
+      
+      header {
+        padding: 20px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(21, 21, 78);
+      }
+      nav {
+        margin-right: auto;
+        width: 600px;
+      }
+      nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        padding-left: 30px;
+        font-size: 25px;
+      }
+      .logo {
+        color: white;
+        font-size: 30px;
+        margin-right: 30px;
+      }
+      .card {
+        height: 700px;
+        width: 100%;
+        background-color: rgb(21, 21, 78);
+      }
+      .card p {
+        position: absolute;
+        margin-top: 200px;
+        margin-left: 600px;
+        color: white;
+        font-size: 50px;
+      }
+      .card .font{
+        margin-top: 270px;
+        margin-left: 500px;
+        color: rgb(152, 150, 150);
+        font-size: 15px;
+      }
+      .card img{
+        height: 200px;
+        width: 200px;
+        border-radius: 100px;
+        margin-top: 350px;
+        margin-left: 200px;
+      }
+      .card .title1{
+        font-size: 40px;
+        margin-top: -5px;
+        margin-left: 240px;
+      }
+      .card .title2{
+        font-size: 40px;
+        margin-top: -5px;
+        margin-left: 650px;
+      }
+      .card .title3{
+        font-size: 40px;
+        margin-top: -5px;
+        margin-left: 1070px;
+      }
+      .search-bar {
+        padding: 3px;
+        width: 400px;
+        border-radius: 48px;
+        background-color: rgba(0, 0, 0, 0.173);
+      }
+
+      .search-bar input {
+        width: 50%;
+        height: 20px;
+        border: 1px;
+        padding-left: 10px;
+        outline: none;
+        background-color: transparent;
+        color: lightblue;
+        font-size: 18px;
+      }
+      .search-bar input::placeholder {
+        color: lightblue;
+        font-size: 18px;
+      }
+      .search-icon {
+        height: 30px;
+        width: 30px;
+        margin-left: 150px;
+        border-radius: 50%;
+        background-color: #5d5d9c99;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+      }
+      .card .title01{
+        font-size: 20px;
+        margin-left: 150px;
+        margin-top: 50px;
+        color: rgb(152, 150, 150);
+      }
+      .card .title02{
+        font-size: 20px;
+        margin-left: 600px;
+        margin-top: 50px;
+        color: rgb(152, 150, 150);
+      }
+      .card .title03{
+        font-size: 20px;
+        margin-left: 1000px;
+        margin-top: 50px;
+        color: rgb(152, 150, 150);
+      }
+      .card2{
+        height: 400px;
+        width: 100%;
+        background-color: rgb(222, 174, 52);
+        margin-top: 500px;
+      }
+      .card2 .content2{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-top: -500px;
+        margin-left: 70px;
+      }
+      .content2 img{
+        height: 300px;
+        width: 300px;
+        border-radius: 100%;
+        margin-top: -300px;
+        margin-left: 200px;
+      }
+      .card2 .content2 h5:nth-child(1){
+        margin-bottom: 20px;
+        font-size: 50px;
+        color: black;
+        margin-left: 900px;
+        margin-top: 100px;
+      }
+      .card2 .content2 h5:nth-child(2){
+        margin-left: 850px;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.636);
+      }
+      .card2 .content2 h5:nth-child(3){
+        background-color: rgb(21, 21, 78);
+        padding: 10px;
+        width: 140px;
+        border-radius: 20px;
+        padding-left: 25px;
+        margin-left: 850px;
+        margin-top: 30px;
+      }
+      .card3{
+        height: 500px;
+        width: 100%;
+        background-color: rgb(21, 21, 78);
+        color: white;
+      }
+      .card3 h1{
+        margin-left: 650px;
+        font-size: 50px;
+        position: absolute;
+        margin-top: 20px;
+      }
+      .card3 p{
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 500px;
+        color: rgb(152, 150, 150);
+        font-size: 18px;
+      }
+      .card3 .circle1{
+        height: 200px;
+        width: 200px;
+        outline: 5px solid white;
+        margin-top: 250px;
+        border-radius: 50%;
+        margin-left: 300px;
+        padding-left: 60px;
+        padding-top: 40px;
+        font-size: 50px;
+        color: white;
+      }
+      .card3 .circle2{
+        height: 200px;
+        width: 200px;
+        outline: 5px solid white;
+        margin-top: 250px;
+        border-radius: 50%;
+        margin-left: 670px;
+        padding-left: 50px;
+        padding-top: 40px;
+        font-size: 50px;
+        color: white;
+      }
+      .card3 .circle3{
+        height: 200px;
+        width: 200px;
+        outline: 5px solid white;
+        margin-top: 250px;
+        border-radius: 50%;
+        margin-left: 1050px;
+        padding-left: 60px;
+        padding-top: 40px;
+        font-size: 50px;
+        color: white;
+      }
+      .card4{
+        height: 400px;
+        width: 100%;
+        background-color: rgb(222, 174, 52);
+        margin-top: 500px;
+      }
+      .card4 .content4{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-top: -500px;
+      }
+      .content4 img{
+        height: 300px;
+        width: 300px;
+        border-radius: 100%;
+        margin-top: -280px;
+        margin-left: 850px;
+      }
+      .card4 .content4 h5:nth-child(1){
+        margin-bottom: 20px;
+        font-size: 50px;
+        color: black;
+        margin-top: 100px;
+        margin-left: 100px;
+      }
+      .card4 .content4 h5:nth-child(2){
+        font-size: 20px;
+        margin-left: 100px;
+        color: rgba(0, 0, 0, 0.636);
+      }
+      .card4 .content4 h5:nth-child(3){
+        background-color: rgb(21, 21, 78);
+        padding: 10px;
+        width: 140px;
+        border-radius: 20px;
+        padding-left: 25px;
+        margin-top: 30px;
+        margin-left: 100px;
+      }
+      .card5{
+        height: 500px;
+        width: 100%;
+        filter: sepia();
+        background-image: url(https://media.istockphoto.com/id/1949906107/photo/composition-with-indian-dishes.jpg?s=2048x2048&w=is&k=20&c=HKYQeRJDLOe-IZYeMTL4-5tc7AcvS4zmWdiGit30K9U=);  
+      }
+      .profile img{
+        height: 200px;
+        width: 200px;
+        margin-top: 50px;
+        margin-left: 600px;
+        border-radius: 50%;
+        filter: brightness(0.9);
+      }
+      .profile p{
+        margin-left: 550px;
+        margin-top: 20px;
+        color: white ;
+      }
+       .profile h2{
+        margin-left: 600px;
+        margin-top: 20px;
+        color:whitesmoke;
+      }
+      .card6{
+        height: 450px;
+        width: 100%;
+        background-color: rgb(222, 174, 52);
+      }
+      .content6 h1{
+        position: absolute;
+        margin-left: 600px;
+        margin-top: 60px;
+        font-size: 70px;
+      }
+      .content6 p{
+        position: absolute;
+        margin-left: 550px;
+        margin-top: 150px;
+      }
+      .search-bar1 {
+        position: absolute;
+        width: 450px;
+        border-radius: 48px;
+        background-color: white;
+        margin-top: 350px;
+        margin-left: 550px;
+      }
+
+      .search-bar1 input {
+        width: 76.8%;
+        height: 20px;
+        border: 1px;
+        padding-left: 10px;
+        outline: none;
+        background-color: transparent;
+        color: gray;
+        font-size: 18px;
+      }
+      .search-bar1 input::placeholder {
+        color: gray;
+        font-size: 18px;
+      }
+      .sub {
+        height: 50px;
+        width: 100px;
+        border-radius: 48px;
+        background-color: rgb(21, 21, 78);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: white;
+      }
+      .card7{
+        height: 400px;
+        width: 100%;
+        background-color: rgb(21, 21, 78);
+      }
+      .card7 h5{
+        position: absolute;
+        margin-top: 100px;
+        font-size: 30px;
+        margin-left: 100px;
+        color: white;
+      }
+      .card7 p{
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 100px;
+        color: rgb(152, 150, 150);
+      }
+      .about ul{
+        position: absolute;
+        margin-left: 700px;
+        list-style: none;
+        color: white;
+        font-size: 20px;
+        margin-top: 150px;
+      }
+      .services ul{
+        position: absolute;
+        margin-left: 950px;
+        list-style-type: none;
+        color: white;
+        font-size: 20px;
+        margin-top: 150px;
+      }
+      .other ul{
+        position: absolute;
+        margin-left: 1200px;
+        margin-top: -150px;
+        list-style-type: none;
+        color: white;
+        font-size: 20px;
+        margin-top: 130px;
+      }
+    </style>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <div>
+    <header>
+      <div class="logo">
+        <i class="fa-solid fa-utensils"></i>
+      </div>
+      <nav>
+        <ul>
+          <li>home</li>
+          <li>Product</li>
+          <li>promo</li>
+          <li>about</li>
+          <li>contect</li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" name="" id="" placeholder="Search menu" />
+        <span class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+      </div>
+    </header>
+    <img
+    src=https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg
+    />
+    <div class="card1">
+    <div class="content">
+      <h5>
+        CHEF-CRAFTED<br />
+        FAST FOOD<br />
+        FOR THE FUTURE.
+      </h5>
+      <h5>
+        PLNT Burger is dedicated to serving the best burgers<br />
+        on the planet, and for the planet!
+      </h5>
+    <h5>ORDER NOW</h5>
+      </div>
+      </div>
+    <div class="card">
+      <p>popular menu</p>
+      <p class="font">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Assumenda suscipit illum <br>
+         nihil magnam inventore, possimus aliquam explicabo fugit? Optio, aliquam?</p>
+
+         <img src="https://media.istockphoto.com/id/998309062/photo/burger-with-beef-and-cheese.jpg?s=612x612&w=0&k=20&c=gsS00tWuoGp0_PQNEIIRII-qsCr42TSRujwBzP7P3Ls=">
+         <p class="title1">burger</p>
+         <p class="title01">Lorem ipsum dolor sit amet, consectetur<br>
+           adipisicing elit. Aspernatur, dolor.</p>
+         <img src="https://media.istockphoto.com/id/1166678093/photo/spaghetti-with-tomato-sauce-shot-on-rustic-wooden-table.webp?b=1&s=612x612&w=0&k=20&c=x3XFbt0OZcyvNl6xRPmYxAGNPz_QvFWoCle_d692BWc=">
+         <p class="title2">noodles</p>
+         <p class="title02">Lorem ipsum dolor sit amet, consectetur <br>
+          adipisicing elit. Fugit, voluptatibus.</p>
+         <img src="https://cdn.pixabay.com/photo/2017/08/06/06/42/pizza-2589569_640.jpg">
+         <p class="title3">pizza</p>
+         <p class="title03">Lorem ipsum dolor sit amet consectetur <br>
+          adipisicing elit. Omnis, impedit.</p>
+    </div>
+    <div class="card2">
+      <div class="content2">
+        <h5>
+         Title Here
+        </h5>
+        <h5>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>
+          Quibusdam repellendus delectus aliquid in sequi. <br>
+          Impedit commodi quod error id minima.<br>
+          Illum sed amet culpa veniam quos aspernatur corporis, accusamus tempore?
+        </h5>
+      <h5>ORDER NOW</h5>
+      <img src="https://cdn.pixabay.com/photo/2021/10/30/12/50/woman-6754248_1280.jpg">
+        </div>
+    </div>
+    <div class="card3">
+      <h1>statistics</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, qui! Dicta aperiam veli<br>
+         recusandae facilis error hic? Repudiandae unde debitis consequatur,<br>
+        quia suscipit quae accusamus velit sint quas officiis sequi.
+      </p>
+      <p class="circle1">123 store</p>
+      <p class="circle2">100 menu</p>
+      <p class="circle3">200 chef</p>
+    </div>
+    <div class="card4">
+      <div class="content4">
+        <h5>
+         Title Here
+        </h5>
+        <h5>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>
+          Quibusdam repellendus delectus aliquid in sequi. <br>
+          Impedit commodi quod error id minima.<br>
+          Illum sed amet culpa veniam quos aspernatur corporis, accusamus tempore?
+        </h5>
+      <h5>ORDER NOW</h5>
+      <img src="https://cdn.pixabay.com/photo/2017/08/07/07/18/table-2600954_960_720.jpg">
+        </div>
+    </div>
+    <div class="card5">
+      <!-- <img src="https://cdn.pixabay.com/photo/2017/11/18/17/09/strawberries-2960533_1280.jpg"> -->
+      <div class="profile">     
+      <img src="https://media.istockphoto.com/id/1309101136/photo/anger-man-confused-image.jpg?s=2048x2048&w=is&k=20&c=Ed1q7SlHJJRBE7Qx2DP32TvhLXlq629c-fzU4TrJgQI=">
+      <p>Lorem ipsum dolor sit amet consectetur <br>
+        adipisicing elit. Amet quas, atque sequi quasi deserunt<br>
+        assumenda ratione vitae eius quos vel?
+      </p>
+      <h2>phoebe frazier</h2>
+    </div>
+  </div>
+    <div class="card6">
+      <div class="content6">
+        <h1>Title Here</h1>
+        <p>Lorem ipsum dolor sit amet consectetur,<br>
+           adipisicing elit. Molestias, vitae placeat odit<br> 
+           nostrum cum deserunt quos explicabo possimus pariatur,<br> 
+           dolorum vero nam sequi reiciendis? 
+          Omnis quos inventore mollitia sint natus!</p>
+          <div class="search-bar1">
+            <input type="text" name="" id="" placeholder="your email" />
+            <span class="sub">subscribe</span>
+          </div>
+      </div>
+    </div>
+    <div class="card7">
+      <h5>Title Here</h5>
+      <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>
+         Cum molestiae, ea dolore cumque ducimus deserunt quibusdam ipsam aut<br>
+         laboriosam fugit reiciendis tenetur enim temporibus consectetur!</P>
+         <div class="about">
+          <ul>
+          <li>about</li>
+          <li>history</li>
+          <li>our team</li>
+          <li>brand guidelines</li>
+          <li> terms&condition</li>
+          <li>privacy policy</li>
+          </ul>
+         </div>
+         <div class="services">
+          <ul>
+            <li>services</li>
+            <li>how to order</li>
+            <li>our product</li>
+            <li>order status</li>
+            <li>promo</li>
+            <li>payment method</li>
+          </ul>
+         </div><br>
+         <div class="other">
+          <ul>
+            <li>other</li>
+            <li>contect us</li>
+            <li>help</li>
+            <li>privacy</li>
+          </ul>
+         </div>
+    </div>
+  </body>
+</html>
